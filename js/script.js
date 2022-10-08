@@ -7,9 +7,12 @@ const closeSidebarBtn = document.querySelector(".close-sidebar-btn");
 const sideBarLinks = document.querySelector(".side-bar-nav-list");
 const tabs = document.querySelectorAll("[data-tab-target]");
 const tabContents = document.querySelectorAll("[data-tab-content]");
+const logo = document.querySelector("#NC-logo");
 
 // Variables
 let lastScrollTop = 71;
+
+console.log(logo);
 
 window.addEventListener("scroll", () => {
   console.log(window.pageYOffset);
@@ -30,19 +33,21 @@ window.addEventListener("scroll", () => {
 hamburger.addEventListener("click", () => {
   if (hamburger.classList.contains("active")) closeNav();
   else openNav();
-  hamburger.classList.toggle("active");
-  hamBox.forEach((box) => {
-    box.classList.toggle("change");
-  });
+  hamburgerToggle();
+  // hamburger.classList.toggle("active");
+  // hamBox.forEach((box) => {
+  //   box.classList.toggle("change");
+  // });
 });
 
 sideBarLinks.addEventListener("click", (e) => {
   if (e.target.className === "sidebar-item") {
     closeNav();
-    hamburger.classList.toggle("active");
-    hamBox.forEach((box) => {
-      box.classList.toggle("change");
-    });
+    hamburgerToggle();
+    // hamburger.classList.toggle("active");
+    // hamBox.forEach((box) => {
+    //   box.classList.toggle("change");
+    // });
   }
 });
 
@@ -60,6 +65,16 @@ tabs.forEach((tab) => {
   });
 });
 
+logo.addEventListener("click", () => {
+  if (hamburger.classList.contains("active")) closeNav();
+  hamburgerToggle();
+});
+
+blurbar.addEventListener("click", () => {
+  closeNav();
+  hamburgerToggle();
+});
+
 function openNav() {
   sidebar.style.width = "60%";
   blurbar.style.width = "40%";
@@ -70,4 +85,11 @@ function closeNav() {
   sidebar.style.width = "0";
   blurbar.style.width = "0";
   document.body.style.overflowY = "visible";
+}
+
+function hamburgerToggle() {
+  hamburger.classList.toggle("active");
+  hamBox.forEach((box) => {
+    box.classList.toggle("change");
+  });
 }
