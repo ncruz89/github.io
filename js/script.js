@@ -66,8 +66,10 @@ tabs.forEach((tab) => {
 });
 
 logo.addEventListener("click", () => {
-  if (hamburger.classList.contains("active")) closeNav();
-  hamburgerToggle();
+  if (hamburger.classList.contains("active")) {
+    closeNav();
+    hamburgerToggle();
+  }
 });
 
 blurbar.addEventListener("click", () => {
