@@ -685,18 +685,21 @@ section {
   }
 
   .shopping-cart-content,
-  .weather-app-content {
+  .weather-app-content,
+  .react-shop-app-content {
     grid-column: 1/ 7;
     text-align: left;
   }
 
   .shopping-cart-image-content,
-  .weather-app-image-content {
+  .weather-app-image-content,
+  .react-shop-app-image-content {
     grid-column: 5/-1;
   }
 
   .shopping-cart-tech-list,
-  .weather-app-tech-list {
+  .weather-app-tech-list,
+  .react-shop-app-tech-list {
     justify-content: flex-start;
   }
 
