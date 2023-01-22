@@ -686,14 +686,14 @@ section {
 
   .shopping-cart-content,
   .weather-app-content,
-  .react-shop-app-content {
+  .share-space-app-content {
     grid-column: 1/ 7;
     text-align: left;
   }
 
   .shopping-cart-image-content,
   .weather-app-image-content,
-  .react-shop-app-image-content {
+  .share-space-app-image-content {
     grid-column: 5/-1;
   }
 
